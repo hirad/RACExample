@@ -19,6 +19,16 @@
 		61B4960219C0F26200715F13 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B495EA19C0F26200715F13 /* UIKit.framework */; };
 		61B4960A19C0F26200715F13 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61B4960819C0F26200715F13 /* InfoPlist.strings */; };
 		61B4960C19C0F26200715F13 /* RACExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4960B19C0F26200715F13 /* RACExampleTests.m */; };
+		61B4961619C0F8B300715F13 /* PLTextFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B4961519C0F8B300715F13 /* PLTextFieldViewController.xib */; };
+		61B4961919C0F90300715F13 /* PLTextFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4961819C0F90300715F13 /* PLTextFieldViewController.m */; };
+		61B4962519C0FED300715F13 /* PLEmailFieldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4962319C0FED300715F13 /* PLEmailFieldViewController.m */; };
+		61B4962619C0FED300715F13 /* PLEmailFieldViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B4962419C0FED300715F13 /* PLEmailFieldViewController.xib */; };
+		61B4962C19C116A900715F13 /* PLLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4962A19C116A900715F13 /* PLLoginViewController.m */; };
+		61B4962D19C116A900715F13 /* PLLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61B4962B19C116A900715F13 /* PLLoginViewController.xib */; };
+		61B4963119C1183700715F13 /* PLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4963019C1183700715F13 /* PLUser.m */; };
+		61B4963419C1187F00715F13 /* PLUserViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4963319C1187F00715F13 /* PLUserViewModel.m */; };
+		61B4963719C118CF00715F13 /* PLAPIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61B4963619C118CF00715F13 /* PLAPIController.m */; };
+		B5C60E4EFD1345119BC2305A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF079BB922D4BA88F6E1C0B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3306B8AD80744947A34DDBF5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		61B495E319C0F26200715F13 /* RACExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61B495E619C0F26200715F13 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61B495E819C0F26200715F13 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +59,22 @@
 		61B4960719C0F26200715F13 /* RACExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RACExampleTests-Info.plist"; sourceTree = "<group>"; };
 		61B4960919C0F26200715F13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61B4960B19C0F26200715F13 /* RACExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACExampleTests.m; sourceTree = "<group>"; };
+		61B4961519C0F8B300715F13 /* PLTextFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLTextFieldViewController.xib; sourceTree = "<group>"; };
+		61B4961719C0F90300715F13 /* PLTextFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTextFieldViewController.h; sourceTree = "<group>"; };
+		61B4961819C0F90300715F13 /* PLTextFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTextFieldViewController.m; sourceTree = "<group>"; };
+		61B4962219C0FED300715F13 /* PLEmailFieldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEmailFieldViewController.h; sourceTree = "<group>"; };
+		61B4962319C0FED300715F13 /* PLEmailFieldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLEmailFieldViewController.m; sourceTree = "<group>"; };
+		61B4962419C0FED300715F13 /* PLEmailFieldViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLEmailFieldViewController.xib; sourceTree = "<group>"; };
+		61B4962919C116A900715F13 /* PLLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLLoginViewController.h; sourceTree = "<group>"; };
+		61B4962A19C116A900715F13 /* PLLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLLoginViewController.m; sourceTree = "<group>"; };
+		61B4962B19C116A900715F13 /* PLLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PLLoginViewController.xib; sourceTree = "<group>"; };
+		61B4962F19C1183700715F13 /* PLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLUser.h; sourceTree = "<group>"; };
+		61B4963019C1183700715F13 /* PLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLUser.m; sourceTree = "<group>"; };
+		61B4963219C1187F00715F13 /* PLUserViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLUserViewModel.h; sourceTree = "<group>"; };
+		61B4963319C1187F00715F13 /* PLUserViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLUserViewModel.m; sourceTree = "<group>"; };
+		61B4963519C118CF00715F13 /* PLAPIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLAPIController.h; sourceTree = "<group>"; };
+		61B4963619C118CF00715F13 /* PLAPIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLAPIController.m; sourceTree = "<group>"; };
+		BCF079BB922D4BA88F6E1C0B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +85,7 @@
 				61B495E919C0F26200715F13 /* CoreGraphics.framework in Frameworks */,
 				61B495EB19C0F26200715F13 /* UIKit.framework in Frameworks */,
 				61B495E719C0F26200715F13 /* Foundation.framework in Frameworks */,
+				B5C60E4EFD1345119BC2305A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +109,7 @@
 				61B4960519C0F26200715F13 /* RACExampleTests */,
 				61B495E519C0F26200715F13 /* Frameworks */,
 				61B495E419C0F26200715F13 /* Products */,
+				3306B8AD80744947A34DDBF5 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +129,7 @@
 				61B495E819C0F26200715F13 /* CoreGraphics.framework */,
 				61B495EA19C0F26200715F13 /* UIKit.framework */,
 				61B495FF19C0F26200715F13 /* XCTest.framework */,
+				BCF079BB922D4BA88F6E1C0B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,10 +137,12 @@
 		61B495EC19C0F26200715F13 /* RACExample */ = {
 			isa = PBXGroup;
 			children = (
+				61B4962819C1169500715F13 /* Simple App */,
 				61B495F519C0F26200715F13 /* PLAppDelegate.h */,
 				61B495F619C0F26200715F13 /* PLAppDelegate.m */,
 				61B495F819C0F26200715F13 /* Images.xcassets */,
 				61B495ED19C0F26200715F13 /* Supporting Files */,
+				61B4962719C1168400715F13 /* Simple Examples */,
 			);
 			path = RACExample;
 			sourceTree = "<group>";
@@ -144,6 +176,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		61B4962719C1168400715F13 /* Simple Examples */ = {
+			isa = PBXGroup;
+			children = (
+				61B4961519C0F8B300715F13 /* PLTextFieldViewController.xib */,
+				61B4961719C0F90300715F13 /* PLTextFieldViewController.h */,
+				61B4961819C0F90300715F13 /* PLTextFieldViewController.m */,
+				61B4962219C0FED300715F13 /* PLEmailFieldViewController.h */,
+				61B4962319C0FED300715F13 /* PLEmailFieldViewController.m */,
+				61B4962419C0FED300715F13 /* PLEmailFieldViewController.xib */,
+			);
+			name = "Simple Examples";
+			sourceTree = "<group>";
+		};
+		61B4962819C1169500715F13 /* Simple App */ = {
+			isa = PBXGroup;
+			children = (
+				61B4962E19C1182500715F13 /* Model */,
+				61B4962919C116A900715F13 /* PLLoginViewController.h */,
+				61B4962A19C116A900715F13 /* PLLoginViewController.m */,
+				61B4962B19C116A900715F13 /* PLLoginViewController.xib */,
+				61B4963519C118CF00715F13 /* PLAPIController.h */,
+				61B4963619C118CF00715F13 /* PLAPIController.m */,
+			);
+			name = "Simple App";
+			sourceTree = "<group>";
+		};
+		61B4962E19C1182500715F13 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				61B4962F19C1183700715F13 /* PLUser.h */,
+				61B4963019C1183700715F13 /* PLUser.m */,
+				61B4963219C1187F00715F13 /* PLUserViewModel.h */,
+				61B4963319C1187F00715F13 /* PLUserViewModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 61B4960F19C0F26200715F13 /* Build configuration list for PBXNativeTarget "RACExample" */;
 			buildPhases = (
+				1B01B02A8C4C4382BB03AE7D /* Check Pods Manifest.lock */,
 				61B495DF19C0F26200715F13 /* Sources */,
 				61B495E019C0F26200715F13 /* Frameworks */,
 				61B495E119C0F26200715F13 /* Resources */,
+				66BE94F0192245918043DD9F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,8 +291,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B4961619C0F8B300715F13 /* PLTextFieldViewController.xib in Resources */,
 				61B495F119C0F26200715F13 /* InfoPlist.strings in Resources */,
+				61B4962619C0FED300715F13 /* PLEmailFieldViewController.xib in Resources */,
 				61B495F919C0F26200715F13 /* Images.xcassets in Resources */,
+				61B4962D19C116A900715F13 /* PLLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,13 +309,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B01B02A8C4C4382BB03AE7D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66BE94F0192245918043DD9F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		61B495DF19C0F26200715F13 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61B4963419C1187F00715F13 /* PLUserViewModel.m in Sources */,
+				61B4962C19C116A900715F13 /* PLLoginViewController.m in Sources */,
 				61B495F719C0F26200715F13 /* PLAppDelegate.m in Sources */,
 				61B495F319C0F26200715F13 /* main.m in Sources */,
+				61B4962519C0FED300715F13 /* PLEmailFieldViewController.m in Sources */,
+				61B4963119C1183700715F13 /* PLUser.m in Sources */,
+				61B4963719C118CF00715F13 /* PLAPIController.m in Sources */,
+				61B4961919C0F90300715F13 /* PLTextFieldViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +468,7 @@
 		};
 		61B4961019C0F26200715F13 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3306B8AD80744947A34DDBF5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -368,6 +482,7 @@
 		};
 		61B4961119C0F26200715F13 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3306B8AD80744947A34DDBF5 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -438,6 +553,7 @@
 				61B4961119C0F26200715F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		61B4961219C0F26200715F13 /* Build configuration list for PBXNativeTarget "RACExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +562,7 @@
 				61B4961419C0F26200715F13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

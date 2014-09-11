@@ -7,6 +7,66 @@
 //
 
 #import "PLAppDelegate.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "PLTextFieldViewController.h"
+#import "PLEmailFieldViewController.h"
+#import "PLLoginViewController.h"
+
+@interface NSArray (FunctionalStuff)
+
+-(NSArray*)map:(id (^)(id object))mappingBlock;
+
+@end
+
+@implementation NSArray (FunctionalStuff)
+
+-(NSArray *)map:(id (^)(id))mappingBlock
+{
+    NSMutableArray* result = [@[] mutableCopy];
+    for (id object in self) {
+        [result addObject:mappingBlock(object)];
+    }
+    return [NSArray arrayWithArray:result];
+}
+
+@end
+
+void sequencesExample() {
+    
+    NSArray* numbers = @[@9, @7, @10, @4, @5, @6];
+    
+    // Doubling numbers without higher order functions
+    NSMutableArray* doubledNumbers = [@[] mutableCopy];
+    for (NSNumber* number in numbers) {
+        [doubledNumbers addObject:@([number integerValue] * 2)];
+    }
+    NSLog(@"Manual Doubling result: %@", doubledNumbers);
+    
+    // with a map method
+    NSArray* mappedResult = [numbers map:^id(NSNumber* number) {
+        return @([number integerValue] * 2);
+    }];
+    NSLog(@"Mapped Results: %@", mappedResult);
+    
+    // with ReactiveCocoa
+    RACSequence* stream = [numbers rac_sequence];
+    stream = [stream map:^id (NSNumber* num){
+        return @([num integerValue] * 2);
+    }];
+    NSLog(@"RAC Results: %@", [stream array]);
+    
+    // filtering with ReactiveCocoa
+    NSLog(@"Even numbers: %@", [[[numbers rac_sequence] filter:^BOOL(NSNumber* number){
+        return [number integerValue] % 2 == 0;
+    }] array]);
+    
+    // tripling the even numbers
+    NSLog(@"Tripled even numbers: %@", [[[[numbers rac_sequence] filter:^BOOL(NSNumber* number){
+        return [number integerValue] % 2 == 0;
+    }] map:^id(NSNumber* number){
+        return @([number integerValue] * 3);
+    }] array]);
+}
 
 @implementation PLAppDelegate
 
@@ -14,36 +74,13 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.rootViewController = [[PLLoginViewController alloc] initWithNibName:nil bundle:nil];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+//    sequencesExample();
+    
     return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application
-{
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application
-{
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
 @end
